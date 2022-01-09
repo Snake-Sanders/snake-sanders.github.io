@@ -11,6 +11,7 @@ _2022-01-09_
 - [Arduino IDE](#arduino-ide)
   - [Board setup](#board-setup)
   - [Test the configuration](#test-the-configuration)
+  - [Setup ESP32-CAM](#setup-esp32-cam)
 
 # Environment
 
@@ -119,3 +120,5 @@ Go to the menu /tools/port, and select the new serial port we configured before:
 ## Test the configuration
 
 Go to the menu /tools/board info, and you should see a pop up window with some information about your board, such as the serial number.
+
+## Setup ESP32-CAM
