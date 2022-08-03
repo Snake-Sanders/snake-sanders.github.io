@@ -1,4 +1,3 @@
-
 # Binaries in Elixir
 
 _2022-04-09_
