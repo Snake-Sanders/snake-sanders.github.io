@@ -13,6 +13,7 @@ _2022-08-03_
     - [Set OMZ theme](#set-omz-theme)
     - [Custom promt](#custom-promt)
 - [Asdf](#asdf)
+- [Terminal](#terminal)
 
 # Transferring files
 
@@ -223,3 +224,17 @@ download with
 Add asdf.sh to your ~/.zshrc with:
 
     echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
+
+# Terminal 
+
+Here is a set of colors I like for the terminal 
+
+![](./iterm_colors.png)
+
+The settings can be imported using the file [sublime.terminal](sublime.terminal)
+
+to import it, go to `Terminal/preferences/profile` and below the list of themes there is button "...", in there select `import` and open `sublime.terminal` file. 
+
+In order to keep GIT branch icons working the font must be set to `Go Mono for Powerline 18`.
+
+![](./sublime_profile.png)
