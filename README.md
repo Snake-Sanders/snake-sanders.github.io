@@ -1,7 +1,11 @@
 # snake-sanders.github.io
 Developer's blog
 
-[- Porting develpment environment from Linux to MacOs](blog/2022-08-03-dev-env-linux-macos/notes.md)
+[- Elixir tricks](blog/2022-09-12_elixir_tricks/notes.md)
+
+[- Starting with Phoenix LiveView](blog/2022-08-15-starting-with-phoenix-live-view/notes.md)
+
+[- Porting development environment from Linux to MacOS](blog/2022-08-03-dev-env-linux-macos/notes.md)
 
 [- Binaries in Elixir](blog/2022-04-09-bianries-in-elixir/notes.md)
 
