@@ -50,4 +50,17 @@ This will open the GUI with information about the system.
 
 ## To run the application
 
-type `mix run --no-halt`
+Type `mix run --no-halt`
+
+## re-execute a previous command
+
+Using `v(n)` where `n` < 0, iex will return the result of a previous command line.
+
+```elixir
+iex(1)> "hi" <> " you"
+"hi you"
+iex(2)> "hello"
+"hello"
+iex(3)> v(-2)
+"hi you"
+```
