@@ -42,6 +42,29 @@ Elixir.Application
 ...
 ```
 
+## Show Module's documentation
+
+There is help documentation available in the console, just type `h` a pass it
+the module you want to know more about.
+
+```Elixir
+iex(1)> h Enum
+```
+
+## Show Module's functions
+
+Most of the times your modules don't have documentation available, thus
+to peak the exported funtion from such a module you can use `exports`.
+
+```Elixir
+iex(1)> exports Enum
+all?/1                
+all?/2                
+any?/1                
+any?/2  
+...
+```      
+
 ## Inspect the processes
 
 In the iex type `:observer.start()`
