@@ -87,3 +87,36 @@ iex(2)> "hello"
 iex(3)> v(-2)
 "hi you"
 ```
+
+# Working with processes
+
+Let's say you are running a program that started a process, you know the pid but you don't have a reference to it.
+
+the log in the console showing the pid would be:
+
+`started process pid:#PID<0.429.0>`
+
+You can create a pid obect as follows
+
+```
+my_pid = :c.pid(0,429,0)
+```
+
+# Adding dependencies
+
+For a quick reference on a dependency you can peak the version using the command `mix hex.info <dep_name>`. This will give you the latest version already formated to be include your `mix.ex`.
+
+e.g.: `{:jason, "~> 1.4"}`
+
+```
+mix hex.info jason 
+
+A blazing fast JSON parser and generator in pure Elixir.
+
+Config: {:jason, "~> 1.4"}
+Releases: 1.5.0-alpha.2, 1.5.0-alpha.1, 1.4.1, 1.4.0, 1.3.0, 1.2.2, 1.2.1, 1.2.0, ...
+
+Licenses: Apache-2.0
+Links:
+  GitHub: https://github.com/michalmuskala/jason
+```
