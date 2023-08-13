@@ -1,6 +1,8 @@
 # snake-sanders.github.io
 Developer's blog
 
+[- VSCode plugins](blog/2023-08-11-vscode-plugs/notes.md)
+
 [- Replacing Postgresql with Docker](blog/2023-03-03-replacing-postgresql-with-docker/notes.md)
 
 [- Elixir tricks](blog/2022-09-12_elixir_tricks/notes.md)
