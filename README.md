@@ -1,5 +1,8 @@
 # snake-sanders.github.io
-Developer's blog
+
+Developer's notes
+
+[- Ecto with JSONB on Postgresql](blog/2024-07-15-ecto-json/notes.md)
 
 [- VSCode plugins](blog/2023-08-11-vscode-plugs/notes.md)
 
