@@ -47,3 +47,17 @@ Repo.update_all(query, [])
 
     Repo.update_all(query, [])
 ```
+
+## Remoe a list of keys from a map
+
+```elixir 
+query =
+  from s in Sensor,
+    update: [
+      set: [
+        configuration: fragment("? - array[?, ?, ?]", s.configuration, "key1", "key2", "key3")
+      ]
+    ]
+
+Repo.update_all(query, [])
+```
