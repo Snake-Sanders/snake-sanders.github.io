@@ -1,5 +1,10 @@
 # Ecto with JSONB on Postgresql
 
+- `Reading`: Use fragment with `->` or `->>` to extract values from JSONB.
+- `Writing`: Use jsonb_set within fragment to modify the JSONB structure.
+- `Advanced`: For more complex operations, you can leverage PostgreSQL's built-in
+JSONB functions and operators, such as `jsonb_set`, `jsonb_insert`, `jsonb_array_elements`, and more.
+
 # JSON Arrays
 
 ## Query an element in a JSON Array
@@ -13,6 +18,9 @@ fragment("? @> ?", s.configuration, ^["autotuning"]
 ```elixir
 |> update([s], set: [configuration: fragment("? || ?", s.configuration, ^["autotuning"])])
 ```
+**Note**
+
+You can also use the `jsonb_array_elements ` function in fragment if you're dealing with arrays inside JSONB.
 
 ## Delete an element in a JSON Array
 
@@ -48,7 +56,7 @@ Repo.update_all(query, [])
     Repo.update_all(query, [])
 ```
 
-## Remoe a list of keys from a map
+## Remove a list of keys from a map
 
 ```elixir 
 query =
