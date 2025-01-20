@@ -5,6 +5,43 @@
 - `Advanced`: For more complex operations, you can leverage PostgreSQL's built-in
 JSONB functions and operators, such as `jsonb_set`, `jsonb_insert`, `jsonb_array_elements`, and more.
 
+# JSONB colun
+
+## Reading from a JSONB column
+
+If you want to query specific fields within a JSONB column 
+(e.g., `jsonb_data->'key'`), you can use fragment to access that part of the JSON data.
+
+```elixir
+from(u in User,
+  where: fragment("?->>'key_name' = ?", u.jsonb_data, "value"),
+  select: u
+)
+```
+In the example above, `jsonb_data->>'key_name'` extracts the value of the 
+`key_name` field from the `jsonb_data` column as text and checks if it matches 
+`"value"`.
+
+## Writing to a JSONB column
+
+```elixir
+Repo.update_all(
+  from(u in User, where: u.id == ^user_id),
+  set: [jsonb_data: fragment("jsonb_set(?, ?, ?)", u.jsonb_data, "'key_name'", "'new_value'")]
+)
+```
+
+## Appending a new key-value pair
+
+You can append a new key-value pair using the `jsonb_set` or `jsonb_insert` function:
+
+```elixir
+Repo.update_all(
+  from(u in User, where: u.id == ^user_id),
+  set: [jsonb_data: fragment("jsonb_set(?, ?, ?)", u.jsonb_data, "'new_key'", "'new_value'")]
+)
+```
+
 # JSON Arrays
 
 ## Query an element in a JSON Array
