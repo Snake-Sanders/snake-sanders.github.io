@@ -14,10 +14,19 @@ If you want to query specific fields within a JSONB column
 
 ```elixir
 from(u in User,
+  select: fragment("?->>'key_name'", u.jsonb_data)
+)
+```
+
+If you want to compare it with a value, use the following:
+
+```elixir
+from(u in User,
   where: fragment("?->>'key_name' = ?", u.jsonb_data, "value"),
   select: u
 )
 ```
+
 In the example above, `jsonb_data->>'key_name'` extracts the value of the 
 `key_name` field from the `jsonb_data` column as text and checks if it matches 
 `"value"`.
